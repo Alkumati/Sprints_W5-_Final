@@ -1,6 +1,6 @@
 resource "aws_instance" "jenkins" {
   ami                         = var.AMI
-  instance_type               = "t2.small" #changed from micro to small... jenkins gets slow
+  instance_type               = "t2.small" #changed from micro to small... jenkins gets slow.
   key_name                    = aws_key_pair.key.key_name
   vpc_security_group_ids      = ["${aws_security_group.sg.id}"]
   associate_public_ip_address = true
